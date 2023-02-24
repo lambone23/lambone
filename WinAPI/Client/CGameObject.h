@@ -15,10 +15,27 @@ namespace yha
 		virtual void Render(HDC hdc);
 		virtual void Release();
 
-		void SetPos(VectorXY pos) { mPos = pos; }
+		template <typename T>
+		T* FnAddComponent()
+		{
+			T* Comp = new T();
+			UINT CompType = (UINT)Comp->FnGetType();
+			mComponents[CompType] = Comp;
 
-	protected:
-		VectorXY mPos;
+			return Comp;
+		}
+
+		template <typename T>
+		T* FnGetComponent()
+		{
+			for (CComponent* Comp : mComponents)
+			{
+				if (dynamic_cast<T*>(Comp))
+					return dynamic_cast<T*>(Comp);
+			}
+
+			return nullptr;
+		}
 
 	private:
 		std::vector<CComponent*> mComponents;

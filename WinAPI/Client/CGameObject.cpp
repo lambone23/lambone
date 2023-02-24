@@ -1,21 +1,30 @@
 #include "CGameObject.h"
 
+#include "CTransform.h"
+
 namespace yha
 {
 	CGameObject::CGameObject()
 	{
-
+		mComponents.resize((UINT)EComponentType::End);
+		FnAddComponent<CTransform>();
 	}
 
 	CGameObject::~CGameObject()
 	{
+		//for (CComponent* Comp : mComponents)
+		//{
+		//	delete Comp;
+		//	Comp = nullptr;
+		//}
 	}
 
 	void CGameObject::Initialize()
 	{
 		for (CComponent* Component : mComponents)
 		{
-			if (Component == nullptr)
+			//if (Component == nullptr)
+			if (Component == NULL)
 				continue;
 
 			Component->Initialize();
@@ -26,7 +35,8 @@ namespace yha
 	{
 		for (CComponent* Component : mComponents)
 		{
-			if (Component == nullptr)
+			//if (Component == nullptr)
+			if (Component == NULL)
 				continue;
 
 			Component->Update();
@@ -37,7 +47,8 @@ namespace yha
 	{
 		for (CComponent* Component : mComponents)
 		{
-			if (Component == nullptr)
+			//if (Component == nullptr)
+			if (Component == NULL)
 				continue;
 
 			Component->Render(hdc);
@@ -48,7 +59,8 @@ namespace yha
 	{
 		for (CComponent* Component : mComponents)
 		{
-			if (Component == nullptr)
+			//if (Component == nullptr)
+			if (Component == NULL)
 				continue;
 
 			Component->Release();

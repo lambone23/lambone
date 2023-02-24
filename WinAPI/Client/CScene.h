@@ -15,6 +15,9 @@ namespace yha
 		virtual void Render(HDC hdc);
 		virtual void Release();
 
+		virtual void FnOnEnter();
+		virtual void FnOnExit();
+
 		void FnAddGameObject(CGameObject* Obj, ELayerType Layer);
 
 	private:

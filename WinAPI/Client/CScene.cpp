@@ -37,6 +37,12 @@ namespace yha
 			Layer.Release();
 		}
 	}
+	void CScene::FnOnEnter()
+	{
+	}
+	void CScene::FnOnExit()
+	{
+	}
 	void CScene::FnAddGameObject(CGameObject* Obj, ELayerType Layer)
 	{
 		mLayers[(UINT)Layer].FnAddGameObject(Obj);

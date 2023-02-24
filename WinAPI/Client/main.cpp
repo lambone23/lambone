@@ -6,6 +6,8 @@
 
 // ■CHK
 #include "CApplication.h"
+#include "CSceneManager.h"
+#include "CResources.h"
 
 #define MAX_LOADSTRING 100
 
@@ -32,6 +34,8 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
     UNREFERENCED_PARAMETER(hPrevInstance);
     UNREFERENCED_PARAMETER(lpCmdLine);
 
+    // ■CHK
+    _CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
 
     // 1. 윈도우의 정보를 담고있는 클래스를 정의(메모리에 등록)해주어야한다.
     // 2. CreateWindow함수를 통해서 메모리상에 윈도우를 할당해준다.
@@ -55,7 +59,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 
     MSG msg;
 
-
+    // ■CHK
     while (true)
     {
         if (PeekMessage(&msg, nullptr, 0, 0, PM_REMOVE))
@@ -72,16 +76,12 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
         else
         {
             // 여기서 게임 로직이 돌아가야한다.
-            // ■CHK
             MyApplication.Run();
         }
     }
 
-
-    if (WM_QUIT == msg.message)
-    {
-
-    }
+    yha::CSceneManager::Release();
+    yha::CResources::Release();
 
     return (int)msg.wParam;
 }

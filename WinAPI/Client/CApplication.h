@@ -3,6 +3,13 @@
 
 namespace yha
 {
+	enum class EResolution
+	{
+		HD,
+		FHD,
+		END
+	};
+
 	class CApplication
 	{
 	public:
@@ -15,6 +22,7 @@ namespace yha
 		void Render();
 
 		HWND FnGetHwnd();
+		HDC FnGetHdc();
 
 	private:
 		HWND mHwnd;
@@ -27,8 +35,5 @@ namespace yha
 		UINT mWidth;
 		UINT mHeight;
 
-		VectorXY mPos;
-
-		//Scene mScene[256];
 	};
 }

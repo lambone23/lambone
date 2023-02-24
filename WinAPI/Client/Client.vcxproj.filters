@@ -50,6 +50,60 @@
     <Filter Include="Engine\00Common\Input">
       <UniqueIdentifier>{7c0c15b5-3351-4fbc-90d5-9a7704945c24}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Contents\Scene\01Title">
+      <UniqueIdentifier>{23419fe3-64fc-40cb-9e44-5ce8104ab498}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Contents\Scene\02Map">
+      <UniqueIdentifier>{0e0507e2-fd6c-4934-97b5-3592f7c69804}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Contents\Scene\03Loading">
+      <UniqueIdentifier>{4f77e51b-e2c3-4c5e-9d65-a438cad81a5b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Contents\Scene\04Ending">
+      <UniqueIdentifier>{83f0b59b-f571-4afe-9326-15d9c54f9eba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Contents\Scene\10PlayDf1">
+      <UniqueIdentifier>{287efab2-e2bb-4328-b9ce-36d514ea4bdd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Contents\Scene\20PlayDf2">
+      <UniqueIdentifier>{753b72f1-6071-4737-98ed-b91b0360162d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Contents\Scene\30PlayDf3">
+      <UniqueIdentifier>{0b7e394b-7920-4540-9d43-699908ce26e5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Contents\Scene\40PlayDfBoss">
+      <UniqueIdentifier>{63b46fc5-4860-4f3e-8ff7-7378db58d4dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\00Common\Resource">
+      <UniqueIdentifier>{0e21ac8c-11a2-48ce-980d-7a41615287eb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Contents\BG">
+      <UniqueIdentifier>{7db94ab9-14c4-4a41-8b72-e76e58f9b801}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Contents\BG\01Title">
+      <UniqueIdentifier>{dc2f13f2-1921-48a7-a76d-408792be64a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Contents\BG\02Map">
+      <UniqueIdentifier>{cd2c4e1b-2082-4e72-a805-db140290f38e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Contents\BG\03Loading">
+      <UniqueIdentifier>{a88389b1-948a-438f-95b9-976a6f1f99ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Contents\BG\04Ending">
+      <UniqueIdentifier>{e8158701-3664-40bb-ac4d-302e61016b59}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Contents\BG\10PlayDf1">
+      <UniqueIdentifier>{9cf1a577-777f-4db8-8d10-e5f1fc39e21b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Contents\BG\20PlayDf2">
+      <UniqueIdentifier>{6f5e2c80-bd6a-428c-9ca7-79fd5a53ff42}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Contents\BG\30PlayDf3">
+      <UniqueIdentifier>{ea42542b-cd0c-4300-b2ed-500e49483dde}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Contents\BG\40PlayDfBoss">
+      <UniqueIdentifier>{84ea5f67-63ad-440e-85e6-ce20b98e600a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Client.h">
@@ -91,9 +145,6 @@
     <ClInclude Include="CLayer.h">
       <Filter>Engine\03Layer</Filter>
     </ClInclude>
-    <ClInclude Include="CScenePlay.h">
-      <Filter>Contents\Scene</Filter>
-    </ClInclude>
     <ClInclude Include="CRayman.h">
       <Filter>Contents\Player</Filter>
     </ClInclude>
@@ -108,6 +159,75 @@
     </ClInclude>
     <ClInclude Include="CInput.h">
       <Filter>Engine\00Common\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="CSceneTitleUbi.h">
+      <Filter>Contents\Scene\01Title</Filter>
+    </ClInclude>
+    <ClInclude Include="CSceneTitle.h">
+      <Filter>Contents\Scene\01Title</Filter>
+    </ClInclude>
+    <ClInclude Include="CSceneMap.h">
+      <Filter>Contents\Scene\02Map</Filter>
+    </ClInclude>
+    <ClInclude Include="CSceneLoading.h">
+      <Filter>Contents\Scene\03Loading</Filter>
+    </ClInclude>
+    <ClInclude Include="CSceneEnding.h">
+      <Filter>Contents\Scene\04Ending</Filter>
+    </ClInclude>
+    <ClInclude Include="CScenePlayDf1.h">
+      <Filter>Contents\Scene\10PlayDf1</Filter>
+    </ClInclude>
+    <ClInclude Include="CScenePlayDf2.h">
+      <Filter>Contents\Scene\20PlayDf2</Filter>
+    </ClInclude>
+    <ClInclude Include="CScenePlayDf3.h">
+      <Filter>Contents\Scene\30PlayDf3</Filter>
+    </ClInclude>
+    <ClInclude Include="CScenePlayDfBoss.h">
+      <Filter>Contents\Scene\40PlayDfBoss</Filter>
+    </ClInclude>
+    <ClInclude Include="CMapRayman.h">
+      <Filter>Contents\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="CImage.h">
+      <Filter>Engine\00Common\Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="CResource.h">
+      <Filter>Engine\00Common\Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="CResources.h">
+      <Filter>Engine\00Common\Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="CTransform.h">
+      <Filter>Engine\05Component</Filter>
+    </ClInclude>
+    <ClInclude Include="CBgMap.h">
+      <Filter>Contents\BG\02Map</Filter>
+    </ClInclude>
+    <ClInclude Include="CBgTitleUbi.h">
+      <Filter>Contents\BG\01Title</Filter>
+    </ClInclude>
+    <ClInclude Include="CBgTitle.h">
+      <Filter>Contents\BG\01Title</Filter>
+    </ClInclude>
+    <ClInclude Include="CBgLoading.h">
+      <Filter>Contents\BG\03Loading</Filter>
+    </ClInclude>
+    <ClInclude Include="CBgEnding.h">
+      <Filter>Contents\BG\04Ending</Filter>
+    </ClInclude>
+    <ClInclude Include="CBgPlayDf1.h">
+      <Filter>Contents\BG\10PlayDf1</Filter>
+    </ClInclude>
+    <ClInclude Include="CBgPlayDf2.h">
+      <Filter>Contents\BG\20PlayDf2</Filter>
+    </ClInclude>
+    <ClInclude Include="CBgPlayDf3.h">
+      <Filter>Contents\BG\30PlayDf3</Filter>
+    </ClInclude>
+    <ClInclude Include="CBgPlayDfBoss.h">
+      <Filter>Contents\BG\40PlayDfBoss</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -145,9 +265,6 @@
     <ClCompile Include="CLayer.cpp">
       <Filter>Engine\03Layer</Filter>
     </ClCompile>
-    <ClCompile Include="CScenePlay.cpp">
-      <Filter>Contents\Scene</Filter>
-    </ClCompile>
     <ClCompile Include="CRayman.cpp">
       <Filter>Contents\Player</Filter>
     </ClCompile>
@@ -162,6 +279,75 @@
     </ClCompile>
     <ClCompile Include="CInput.cpp">
       <Filter>Engine\00Common\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="CSceneTitle.cpp">
+      <Filter>Contents\Scene\01Title</Filter>
+    </ClCompile>
+    <ClCompile Include="CSceneTitleUbi.cpp">
+      <Filter>Contents\Scene\01Title</Filter>
+    </ClCompile>
+    <ClCompile Include="CSceneMap.cpp">
+      <Filter>Contents\Scene\02Map</Filter>
+    </ClCompile>
+    <ClCompile Include="CSceneLoading.cpp">
+      <Filter>Contents\Scene\03Loading</Filter>
+    </ClCompile>
+    <ClCompile Include="CSceneEnding.cpp">
+      <Filter>Contents\Scene\04Ending</Filter>
+    </ClCompile>
+    <ClCompile Include="CScenePlayDf1.cpp">
+      <Filter>Contents\Scene\10PlayDf1</Filter>
+    </ClCompile>
+    <ClCompile Include="CScenePlayDf2.cpp">
+      <Filter>Contents\Scene\20PlayDf2</Filter>
+    </ClCompile>
+    <ClCompile Include="CScenePlayDf3.cpp">
+      <Filter>Contents\Scene\30PlayDf3</Filter>
+    </ClCompile>
+    <ClCompile Include="CScenePlayDfBoss.cpp">
+      <Filter>Contents\Scene\40PlayDfBoss</Filter>
+    </ClCompile>
+    <ClCompile Include="CMapRayman.cpp">
+      <Filter>Contents\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="CImage.cpp">
+      <Filter>Engine\00Common\Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="CResource.cpp">
+      <Filter>Engine\00Common\Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="CResources.cpp">
+      <Filter>Engine\00Common\Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="CTransform.cpp">
+      <Filter>Engine\05Component</Filter>
+    </ClCompile>
+    <ClCompile Include="CBgMap.cpp">
+      <Filter>Contents\BG\02Map</Filter>
+    </ClCompile>
+    <ClCompile Include="CBgTitleUbi.cpp">
+      <Filter>Contents\BG\01Title</Filter>
+    </ClCompile>
+    <ClCompile Include="CBgTitle.cpp">
+      <Filter>Contents\BG\01Title</Filter>
+    </ClCompile>
+    <ClCompile Include="CBgLoading.cpp">
+      <Filter>Contents\BG\03Loading</Filter>
+    </ClCompile>
+    <ClCompile Include="CBgEnding.cpp">
+      <Filter>Contents\BG\04Ending</Filter>
+    </ClCompile>
+    <ClCompile Include="CBgPlayDf1.cpp">
+      <Filter>Contents\BG\10PlayDf1</Filter>
+    </ClCompile>
+    <ClCompile Include="CBgPlayDf2.cpp">
+      <Filter>Contents\BG\20PlayDf2</Filter>
+    </ClCompile>
+    <ClCompile Include="CBgPlayDf3.cpp">
+      <Filter>Contents\BG\30PlayDf3</Filter>
+    </ClCompile>
+    <ClCompile Include="CBgPlayDfBoss.cpp">
+      <Filter>Contents\BG\40PlayDfBoss</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

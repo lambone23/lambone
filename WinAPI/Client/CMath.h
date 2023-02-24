@@ -26,10 +26,16 @@ struct VectorXY
 
 	}
 
-	VectorXY(VectorXY& other)
-		: X(other.X)
-		, Y(other.Y)
-	{
+	VectorXY(const VectorXY&) = default;
+	VectorXY& operator=(const VectorXY&) = default;
 
-	}
+	VectorXY(VectorXY&&) = default;
+	VectorXY& operator=(VectorXY&&) = default;
+
+	//VectorXY(VectorXY& other)
+	//	: X(other.X)
+	//	, Y(other.Y)
+	//{
+
+	//}
 };

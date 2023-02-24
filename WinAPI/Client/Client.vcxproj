@@ -127,13 +127,35 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="CBgEnding.h" />
+    <ClInclude Include="CBgLoading.h" />
+    <ClInclude Include="CBgMap.h" />
+    <ClInclude Include="CBgPlayDf1.h" />
+    <ClInclude Include="CBgPlayDf2.h" />
+    <ClInclude Include="CBgPlayDf3.h" />
+    <ClInclude Include="CBgPlayDfBoss.h" />
+    <ClInclude Include="CBgTitle.h" />
+    <ClInclude Include="CBgTitleUbi.h" />
+    <ClInclude Include="CImage.h" />
     <ClInclude Include="CInput.h" />
     <ClInclude Include="CLayer.h" />
     <ClInclude Include="Client.h" />
+    <ClInclude Include="CMapRayman.h" />
     <ClInclude Include="CommonInclude.h" />
     <ClInclude Include="CRayman.h" />
-    <ClInclude Include="CScenePlay.h" />
+    <ClInclude Include="CResource.h" />
+    <ClInclude Include="CResources.h" />
+    <ClInclude Include="CSceneEnding.h" />
+    <ClInclude Include="CSceneLoading.h" />
+    <ClInclude Include="CSceneMap.h" />
+    <ClInclude Include="CScenePlayDf1.h" />
+    <ClInclude Include="CScenePlayDf2.h" />
+    <ClInclude Include="CScenePlayDf3.h" />
+    <ClInclude Include="CScenePlayDfBoss.h" />
+    <ClInclude Include="CSceneTitle.h" />
+    <ClInclude Include="CSceneTitleUbi.h" />
     <ClInclude Include="CTime.h" />
+    <ClInclude Include="CTransform.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="CApplication.h" />
     <ClInclude Include="CComponent.h" />
@@ -148,11 +170,33 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CBgEnding.cpp" />
+    <ClCompile Include="CBgLoading.cpp" />
+    <ClCompile Include="CBgMap.cpp" />
+    <ClCompile Include="CBgPlayDf1.cpp" />
+    <ClCompile Include="CBgPlayDf2.cpp" />
+    <ClCompile Include="CBgPlayDf3.cpp" />
+    <ClCompile Include="CBgPlayDfBoss.cpp" />
+    <ClCompile Include="CBgTitle.cpp" />
+    <ClCompile Include="CBgTitleUbi.cpp" />
+    <ClCompile Include="CImage.cpp" />
     <ClCompile Include="CInput.cpp" />
     <ClCompile Include="CLayer.cpp" />
+    <ClCompile Include="CMapRayman.cpp" />
     <ClCompile Include="CRayman.cpp" />
-    <ClCompile Include="CScenePlay.cpp" />
+    <ClCompile Include="CResource.cpp" />
+    <ClCompile Include="CResources.cpp" />
+    <ClCompile Include="CSceneEnding.cpp" />
+    <ClCompile Include="CSceneLoading.cpp" />
+    <ClCompile Include="CSceneMap.cpp" />
+    <ClCompile Include="CScenePlayDf1.cpp" />
+    <ClCompile Include="CScenePlayDf2.cpp" />
+    <ClCompile Include="CScenePlayDf3.cpp" />
+    <ClCompile Include="CScenePlayDfBoss.cpp" />
+    <ClCompile Include="CSceneTitle.cpp" />
+    <ClCompile Include="CSceneTitleUbi.cpp" />
     <ClCompile Include="CTime.cpp" />
+    <ClCompile Include="CTransform.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="CApplication.cpp" />
     <ClCompile Include="CComponent.cpp" />

@@ -16,14 +16,24 @@ namespace yha
 		CSceneManager::Release();
 		//Time::Release();
 	}
-
+	
 	void CApplication::Initialize(HWND hWnd)
 	{
 		mHwnd = hWnd;
 		mHdc = GetDC(hWnd);
 
-		mWidth = 1600;
-		mHeight = 900;
+		const EResolution SetResolution = EResolution::HD;
+
+		if ((int)SetResolution == (int)EResolution::HD)
+		{
+			mWidth	= 1280;
+			mHeight	= 720;
+		}
+		else if ((int)SetResolution == (int)EResolution::FHD)
+		{
+			mWidth	= 1920;
+			mHeight	= 1080;
+		}
 
 		// 비트맵 해상도를 설정하기 위한 실제 윈도우 크기를 계산
 		RECT Rect = { 0, 0, mWidth , mHeight };
@@ -35,12 +45,14 @@ namespace yha
 			, Rect.right - Rect.left
 			, Rect.bottom - Rect.top
 			, 0);
+
 		ShowWindow(hWnd, true);
 
 		mBackBuffer = CreateCompatibleBitmap(mHdc, mWidth, mHeight);
 		mBackHDC = CreateCompatibleDC(mHdc);
 
-		HBITMAP defaultBitmap = (HBITMAP)SelectObject(mBackHDC, mBackBuffer);
+		HBITMAP defaultBitmap
+			= (HBITMAP)SelectObject(mBackHDC, mBackBuffer);
 		DeleteObject(defaultBitmap);
 
 		CTime::Initiailize();
@@ -72,10 +84,15 @@ namespace yha
 
 		// 백버퍼에 있는 그림을 원본버퍼에 그리기
 		BitBlt(mHdc, 0, 0, mWidth, mHeight, mBackHDC, 0, 0, SRCCOPY);
+
 	}
 
 	HWND CApplication::FnGetHwnd()
 	{
 		return mHwnd;
+	}
+	HDC CApplication::FnGetHdc()
+	{
+		return mHdc;
 	}
 }

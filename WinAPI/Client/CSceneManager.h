@@ -11,7 +11,10 @@ namespace yha
 		static void Render(HDC hdc);
 		static void Release();
 
+		static void FnLoadScene(ESceneType Type);
+
 	private:
 		static std::vector<CScene*> mScenes;
+		static CScene* mActiveScene;
 	};
 }

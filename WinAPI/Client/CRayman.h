@@ -1,5 +1,6 @@
 #pragma once
 #include "CGameObject.h"
+#include "CImage.h"
 
 namespace yha
 {
@@ -15,8 +16,8 @@ namespace yha
 		virtual void Release() override;
 
 	private:
+		CImage* mImage;
 	};
-
 }
 
 

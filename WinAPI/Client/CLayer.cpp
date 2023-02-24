@@ -12,7 +12,8 @@ namespace yha
 	{
 		for (CGameObject* GameObj : mGameObjects)
 		{
-			if (GameObj == nullptr)
+			//if (GameObj == nullptr)
+			if (GameObj == NULL)
 				continue;
 
 			GameObj->Initialize();
@@ -22,7 +23,8 @@ namespace yha
 	{
 		for (CGameObject* GameObj : mGameObjects)
 		{
-			if (GameObj == nullptr)
+			//if (GameObj == nullptr)
+			if (GameObj == NULL)
 				continue;
 
 			GameObj->Update();
@@ -32,7 +34,8 @@ namespace yha
 	{
 		for (CGameObject* GameObj : mGameObjects)
 		{
-			if (GameObj == nullptr)
+			//if (GameObj == nullptr)
+			if (GameObj == NULL)
 				continue;
 
 			GameObj->Render(hdc);
@@ -42,7 +45,8 @@ namespace yha
 	{
 		for (CGameObject* GameObj : mGameObjects)
 		{
-			if (GameObj == nullptr)
+			//if (GameObj == nullptr)
+			if (GameObj == NULL)
 				continue;
 
 			GameObj->Release();
@@ -50,7 +54,8 @@ namespace yha
 	}
 	void CLayer::FnAddGameObject(CGameObject* GameObj)
 	{
-		if (GameObj == nullptr)
+		//if (GameObj == nullptr)
+		if (GameObj == NULL)
 			return;
 
 		mGameObjects.push_back(GameObj);
