@@ -1,4 +1,5 @@
 #include "CScene.h"
+#include "CSceneMgr.h"
 
 namespace yha
 {
@@ -8,13 +9,16 @@ namespace yha
 	}
 	CScene::~CScene()
 	{
+
 	}
 	void CScene::Initialize()
 	{
-		for (CLayer& Layer : mLayers)
-		{
-			Layer.Initialize();
-		}
+		CSceneMgr::FnSetActiveScene(this);
+
+		//for (CLayer& Layer : mLayers)
+		//{
+		//	Layer.Initialize();
+		//}
 	}
 	void CScene::Update()
 	{
@@ -37,6 +41,37 @@ namespace yha
 			Layer.Release();
 		}
 	}
+
+	void CScene::FnDestroy()
+	{
+		std::vector<CGameObject*> DeleteGameObjects = {};
+		for (CLayer& Layer : mLayers)
+		{
+			std::vector<CGameObject*>& GameObjects
+				= Layer.FnGetGameObjects();
+
+			for (std::vector<CGameObject*>::iterator Iter = GameObjects.begin()
+				; Iter != GameObjects.end(); )
+			{
+				if ((*Iter)->FnGetState() == CGameObject::EState::Death)
+				{
+					DeleteGameObjects.push_back((*Iter));
+					Iter = GameObjects.erase(Iter);
+				}
+				else
+				{
+					Iter++;
+				}
+			}
+		}
+
+		for (CGameObject* DeathObj : DeleteGameObjects)
+		{
+			delete DeathObj;
+			DeathObj = nullptr;
+		}
+	}
+
 	void CScene::FnOnEnter()
 	{
 	}
@@ -46,5 +81,10 @@ namespace yha
 	void CScene::FnAddGameObject(CGameObject* Obj, ELayerType Layer)
 	{
 		mLayers[(UINT)Layer].FnAddGameObject(Obj);
+	}
+
+	std::vector<CGameObject*>& CScene::FnGetGameObjects(ELayerType Layer)
+	{
+		return mLayers[(UINT)Layer].FnGetGameObjects();
 	}
 }

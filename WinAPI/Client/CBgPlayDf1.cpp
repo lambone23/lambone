@@ -1,7 +1,7 @@
 #include "CBgPlayDf1.h"
 
 #include "CTime.h"
-#include "CSceneManager.h"
+#include "CSceneMgr.h"
 #include "CInput.h"
 #include "CResources.h"
 
@@ -16,7 +16,8 @@ namespace yha
 	}
 	void CBgPlayDf1::Initialize()
 	{
-		mImage = CResources::FnLoad<CImage>(L"PlayDf1", L"..\\Resources\\10_DreamForest1.bmp");
+		mImage = CResources::FnLoad<CImage>(L"PlayDf1", L"..\\Resources\\BG\\10_DreamForest1_BG.bmp");
+		//mImage = CResources::FnLoad<CImage>(L"PlayDf1", L"..\\Resources\\10_DreamForest1_BG.bmp");
 
 		CGameObject::Initialize();
 	}

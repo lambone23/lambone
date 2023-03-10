@@ -7,6 +7,7 @@ namespace yha
 	{
 		HD,
 		FHD,
+		Custom,
 		END
 	};
 
@@ -16,13 +17,20 @@ namespace yha
 		CApplication();
 		~CApplication();
 
+	public:
 		void Initialize(HWND hWnd);
 		void Run();
 		void Update();
 		void Render();
 
-		HWND FnGetHwnd();
-		HDC FnGetHdc();
+	public:
+		HWND FnGetHwnd() { return mHwnd; }
+		HDC FnGetHdc() { return mHdc; }
+		UINT FnGetWidth() { return mWidth; }
+		UINT FnGetHeight() { return mHeight; }
+
+	private:
+		void FnClear();
 
 	private:
 		HWND mHwnd;
@@ -35,5 +43,6 @@ namespace yha
 		UINT mWidth;
 		UINT mHeight;
 
+		VectorXY mPos;
 	};
 }

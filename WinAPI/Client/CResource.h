@@ -9,6 +9,7 @@ namespace yha
 		CResource();
 		virtual ~CResource();
 
+	public:
 		virtual HRESULT FnLoad(const std::wstring& Path) = 0;
 
 		const std::wstring& FnGetKey() { return mKey; }

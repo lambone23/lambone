@@ -1,7 +1,7 @@
 #include "CBgTitleUbi.h"
 
 #include "CTime.h"
-#include "CSceneManager.h"
+#include "CSceneMgr.h"
 #include "CInput.h"
 #include "CResources.h"
 #include "CTransform.h"
@@ -17,7 +17,8 @@ namespace yha
 	}
 	void CBgTitleUbi::Initialize()
 	{
-		mImage = CResources::FnLoad<CImage>(L"TitleUbi", L"..\\Resources\\00_UbiSoft.bmp");
+		mImage = CResources::FnLoad<CImage>(L"TitleUbi", L"..\\Resources\\BG\\00_Logo.bmp");
+		//mImage = CResources::FnLoad<CImage>(L"TitleUbi", L"..\\Resources\\00_Logo.bmp");
 
 		CGameObject::Initialize();
 	}

@@ -5,6 +5,7 @@
 namespace yha
 {
 	CGameObject::CGameObject()
+		: mState(EState::Active)
 	{
 		mComponents.resize((UINT)EComponentType::End);
 		FnAddComponent<CTransform>();
@@ -12,20 +13,21 @@ namespace yha
 
 	CGameObject::~CGameObject()
 	{
-		//for (CComponent* Comp : mComponents)
-		//{
-		//	delete Comp;
-		//	Comp = nullptr;
-		//}
+		for (CComponent* Component : mComponents)
+		{
+			delete Component;
+			Component = nullptr;
+		}
 	}
 
 	void CGameObject::Initialize()
 	{
 		for (CComponent* Component : mComponents)
 		{
-			//if (Component == nullptr)
-			if (Component == NULL)
+			if (Component == nullptr)
+			{
 				continue;
+			}
 
 			Component->Initialize();
 		}
@@ -35,9 +37,10 @@ namespace yha
 	{
 		for (CComponent* Component : mComponents)
 		{
-			//if (Component == nullptr)
-			if (Component == NULL)
+			if (Component == nullptr)
+			{
 				continue;
+			}
 
 			Component->Update();
 		}
@@ -47,9 +50,10 @@ namespace yha
 	{
 		for (CComponent* Component : mComponents)
 		{
-			//if (Component == nullptr)
-			if (Component == NULL)
+			if (Component == nullptr)
+			{
 				continue;
+			}
 
 			Component->Render(hdc);
 		}
@@ -59,11 +63,22 @@ namespace yha
 	{
 		for (CComponent* Component : mComponents)
 		{
-			//if (Component == nullptr)
-			if (Component == NULL)
+			if (Component == nullptr)
+			{
 				continue;
+			}
 
 			Component->Release();
 		}
+	}
+
+	void CGameObject::FnOnCollisionEnter(CCollider* Other)
+	{
+	}
+	void CGameObject::FnOnCollisionStay(CCollider* Other)
+	{
+	}
+	void CGameObject::FnOnCollisionExit(CCollider* Other)
+	{
 	}
 }

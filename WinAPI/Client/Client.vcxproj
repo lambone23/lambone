@@ -104,6 +104,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -127,20 +128,28 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="CAnimation.h" />
+    <ClInclude Include="CAnimator.h" />
     <ClInclude Include="CBgEnding.h" />
     <ClInclude Include="CBgLoading.h" />
     <ClInclude Include="CBgMap.h" />
+    <ClInclude Include="CBgObjPlayDf1.h" />
     <ClInclude Include="CBgPlayDf1.h" />
     <ClInclude Include="CBgPlayDf2.h" />
     <ClInclude Include="CBgPlayDf3.h" />
     <ClInclude Include="CBgPlayDfBoss.h" />
     <ClInclude Include="CBgTitle.h" />
     <ClInclude Include="CBgTitleUbi.h" />
+    <ClInclude Include="CBlueChomper.h" />
+    <ClInclude Include="CCamera.h" />
+    <ClInclude Include="CCollider.h" />
+    <ClInclude Include="CCollisionMgr.h" />
     <ClInclude Include="CImage.h" />
     <ClInclude Include="CInput.h" />
     <ClInclude Include="CLayer.h" />
     <ClInclude Include="Client.h" />
     <ClInclude Include="CMapRayman.h" />
+    <ClInclude Include="CObject.h" />
     <ClInclude Include="CommonInclude.h" />
     <ClInclude Include="CRayman.h" />
     <ClInclude Include="CResource.h" />
@@ -163,22 +172,29 @@
     <ClInclude Include="CGameObject.h" />
     <ClInclude Include="CMath.h" />
     <ClInclude Include="CScene.h" />
-    <ClInclude Include="CSceneManager.h" />
+    <ClInclude Include="CSceneMgr.h" />
     <ClInclude Include="CEngine.h" />
     <ClInclude Include="CEntity.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CAnimation.cpp" />
+    <ClCompile Include="CAnimator.cpp" />
     <ClCompile Include="CBgEnding.cpp" />
     <ClCompile Include="CBgLoading.cpp" />
     <ClCompile Include="CBgMap.cpp" />
+    <ClCompile Include="CBgObjPlayDf1.cpp" />
     <ClCompile Include="CBgPlayDf1.cpp" />
     <ClCompile Include="CBgPlayDf2.cpp" />
     <ClCompile Include="CBgPlayDf3.cpp" />
     <ClCompile Include="CBgPlayDfBoss.cpp" />
     <ClCompile Include="CBgTitle.cpp" />
     <ClCompile Include="CBgTitleUbi.cpp" />
+    <ClCompile Include="CBlueChomper.cpp" />
+    <ClCompile Include="CCamera.cpp" />
+    <ClCompile Include="CCollider.cpp" />
+    <ClCompile Include="CCollisionMgr.cpp" />
     <ClCompile Include="CImage.cpp" />
     <ClCompile Include="CInput.cpp" />
     <ClCompile Include="CLayer.cpp" />
@@ -204,7 +220,7 @@
     <ClCompile Include="CGameObject.cpp" />
     <ClCompile Include="CMath.cpp" />
     <ClCompile Include="CScene.cpp" />
-    <ClCompile Include="CSceneManager.cpp" />
+    <ClCompile Include="CSceneMgr.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Client.rc" />

@@ -1,7 +1,7 @@
 #include "CBgPlayDfBoss.h"
 
 #include "CTime.h"
-#include "CSceneManager.h"
+#include "CSceneMgr.h"
 #include "CInput.h"
 #include "CResources.h"
 
@@ -16,7 +16,8 @@ namespace yha
 	}
 	void CBgPlayDfBoss::Initialize()
 	{
-		mImage = CResources::FnLoad<CImage>(L"PlayDfBoss", L"..\\Resources\\40_DreamForestBoss.bmp");
+		mImage = CResources::FnLoad<CImage>(L"PlayDfBoss", L"..\\Resources\\tmp\\40_DreamForestBoss.bmp");
+		//mImage = CResources::FnLoad<CImage>(L"PlayDfBoss", L"..\\Resources\\40_DreamForestBoss.bmp");
 
 		CGameObject::Initialize();
 	}

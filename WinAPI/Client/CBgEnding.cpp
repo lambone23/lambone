@@ -1,7 +1,7 @@
 #include "CBgEnding.h"
 
 #include "CTime.h"
-#include "CSceneManager.h"
+#include "CSceneMgr.h"
 #include "CInput.h"
 #include "CResources.h"
 #include "CTransform.h"
@@ -17,7 +17,8 @@ namespace yha
 	}
 	void CBgEnding::Initialize()
 	{
-		mImage = CResources::FnLoad<CImage>(L"Ending", L"..\\Resources\\04_Ending.bmp");
+		mImage = CResources::FnLoad<CImage>(L"Ending", L"..\\Resources\\tmp\\04_Ending.bmp");
+		//mImage = CResources::FnLoad<CImage>(L"Ending", L"..\\Resources\\04_Ending.bmp");
 
 		CGameObject::Initialize();
 	}

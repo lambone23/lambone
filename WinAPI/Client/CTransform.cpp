@@ -4,6 +4,8 @@ namespace yha
 {
 	CTransform::CTransform()
 		:CComponent(EComponentType::Transform)
+		, mPos(VectorXY::Zero)
+		, mScale(VectorXY::One)
 	{
 	}
 	CTransform::~CTransform()

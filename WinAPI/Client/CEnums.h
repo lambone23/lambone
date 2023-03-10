@@ -4,34 +4,35 @@ enum class ESceneType
 {
 	TitleUbi,
 	Title,
-	Map,
-	Loading,
+	//Map,
+	//Loading,
 	PlayDf1,
 	PlayDf2,
-	PlayDf3,
+	//PlayDf3,
 	PlayDfBoss,
 	Ending,
-	End,
+	End
 };
 
 enum class ELayerType
 {
 	BG,
 	BG_Obj,
-	Player,
 	Monster,
+	Player,
+	Punch,
 	Item,
 	Effect,
 	UI,
-	End,
+	End = 16
 };
 
 enum class EComponentType
 {
 	Transform,
-	Collider,
 	SpriteRenderer,
 	Animator,
+	Collider,
 	Audio,
-	End,
+	End
 };

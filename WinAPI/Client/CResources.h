@@ -22,8 +22,7 @@ namespace yha
 			}
 
 			//데이터 없다면 널을 반환
-			//return nullptr;
-			return NULL;
+			return nullptr;
 		}
 
 		template <typename T>
@@ -31,8 +30,7 @@ namespace yha
 		{
 			// 키값으로 탐색
 			T* Resource = CResources::FnFind<T>(Key);
-			//if (Resource != nullptr)
-			if (Resource != NULL)
+			if (Resource != nullptr)
 			{
 				return Resource;
 			}
@@ -42,8 +40,7 @@ namespace yha
 			if (FAILED(Resource->FnLoad(Path)))
 			{
 				assert(false);
-				//return nullptr;
-				return NULL;
+				return nullptr;
 			}
 
 			Resource->FnSetKey(Key);
@@ -53,13 +50,18 @@ namespace yha
 			return dynamic_cast<T*>(Resource);
 		}
 
+		template <typename T>
+		static void FnInsert(const std::wstring& Key, T* Resource)
+		{
+			mResources.insert(std::make_pair(Key, Resource));
+		}
+
 		static void Release()
 		{
 			for (auto pair : mResources)
 			{
 				delete pair.second;
-				//pair.second = nullptr;
-				pair.second = NULL;
+				pair.second = nullptr;
 			}
 		}
 

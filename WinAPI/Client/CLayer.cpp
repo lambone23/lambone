@@ -7,14 +7,31 @@ namespace yha
 	}
 	CLayer::~CLayer()
 	{
+		for (CGameObject* GameObj : mGameObjects)
+		{
+			if (GameObj == nullptr)
+			{
+				continue;
+			}
+				
+			delete GameObj;
+			GameObj = nullptr;
+		}
 	}
 	void CLayer::Initialize()
 	{
 		for (CGameObject* GameObj : mGameObjects)
 		{
-			//if (GameObj == nullptr)
-			if (GameObj == NULL)
+			if (GameObj == nullptr)
+			{
 				continue;
+			}
+
+			if (GameObj->FnGetState()
+				!= CGameObject::EState::Active)
+			{
+				continue;
+			}
 
 			GameObj->Initialize();
 		}
@@ -23,9 +40,17 @@ namespace yha
 	{
 		for (CGameObject* GameObj : mGameObjects)
 		{
-			//if (GameObj == nullptr)
-			if (GameObj == NULL)
+			if (GameObj == nullptr)
+			{
 				continue;
+			}
+
+			if (GameObj->FnGetState()
+				!= CGameObject::EState::Active)
+			{
+				continue;
+			}
+			
 
 			GameObj->Update();
 		}
@@ -34,10 +59,16 @@ namespace yha
 	{
 		for (CGameObject* GameObj : mGameObjects)
 		{
-			//if (GameObj == nullptr)
-			if (GameObj == NULL)
+			if (GameObj == nullptr)
+			{
 				continue;
-
+			}
+			if (GameObj->FnGetState()
+				!= CGameObject::EState::Active)
+			{
+				continue;
+			}
+			
 			GameObj->Render(hdc);
 		}
 	}
@@ -45,18 +76,20 @@ namespace yha
 	{
 		for (CGameObject* GameObj : mGameObjects)
 		{
-			//if (GameObj == nullptr)
-			if (GameObj == NULL)
+			if (GameObj == nullptr)
+			{
 				continue;
+			}
 
 			GameObj->Release();
 		}
 	}
 	void CLayer::FnAddGameObject(CGameObject* GameObj)
 	{
-		//if (GameObj == nullptr)
-		if (GameObj == NULL)
+		if (GameObj == nullptr)
+		{
 			return;
+		}
 
 		mGameObjects.push_back(GameObj);
 	}

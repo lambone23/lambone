@@ -17,9 +17,6 @@
     <Filter Include="Contents\Player">
       <UniqueIdentifier>{a3549bdb-56a1-4853-9cf5-78b9a6eb9601}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Contents\Scene">
-      <UniqueIdentifier>{2dddbb85-27cc-4d94-b2d6-b5414c3561d6}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Engine\00Common">
       <UniqueIdentifier>{2d25152f-9e6a-41a2-aba8-2755e2119e23}</UniqueIdentifier>
     </Filter>
@@ -50,30 +47,6 @@
     <Filter Include="Engine\00Common\Input">
       <UniqueIdentifier>{7c0c15b5-3351-4fbc-90d5-9a7704945c24}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Contents\Scene\01Title">
-      <UniqueIdentifier>{23419fe3-64fc-40cb-9e44-5ce8104ab498}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Contents\Scene\02Map">
-      <UniqueIdentifier>{0e0507e2-fd6c-4934-97b5-3592f7c69804}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Contents\Scene\03Loading">
-      <UniqueIdentifier>{4f77e51b-e2c3-4c5e-9d65-a438cad81a5b}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Contents\Scene\04Ending">
-      <UniqueIdentifier>{83f0b59b-f571-4afe-9326-15d9c54f9eba}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Contents\Scene\10PlayDf1">
-      <UniqueIdentifier>{287efab2-e2bb-4328-b9ce-36d514ea4bdd}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Contents\Scene\20PlayDf2">
-      <UniqueIdentifier>{753b72f1-6071-4737-98ed-b91b0360162d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Contents\Scene\30PlayDf3">
-      <UniqueIdentifier>{0b7e394b-7920-4540-9d43-699908ce26e5}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Contents\Scene\40PlayDfBoss">
-      <UniqueIdentifier>{63b46fc5-4860-4f3e-8ff7-7378db58d4dd}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Engine\00Common\Resource">
       <UniqueIdentifier>{0e21ac8c-11a2-48ce-980d-7a41615287eb}</UniqueIdentifier>
     </Filter>
@@ -103,6 +76,51 @@
     </Filter>
     <Filter Include="Contents\BG\40PlayDfBoss">
       <UniqueIdentifier>{84ea5f67-63ad-440e-85e6-ce20b98e600a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\02Scene\01Title">
+      <UniqueIdentifier>{23419fe3-64fc-40cb-9e44-5ce8104ab498}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\02Scene\02Map">
+      <UniqueIdentifier>{0e0507e2-fd6c-4934-97b5-3592f7c69804}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\02Scene\03Loading">
+      <UniqueIdentifier>{4f77e51b-e2c3-4c5e-9d65-a438cad81a5b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\02Scene\04Ending">
+      <UniqueIdentifier>{83f0b59b-f571-4afe-9326-15d9c54f9eba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\02Scene\10PlayDf1">
+      <UniqueIdentifier>{287efab2-e2bb-4328-b9ce-36d514ea4bdd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\02Scene\20PlayDf2">
+      <UniqueIdentifier>{753b72f1-6071-4737-98ed-b91b0360162d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\02Scene\30PlayDf3">
+      <UniqueIdentifier>{0b7e394b-7920-4540-9d43-699908ce26e5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\02Scene\40PlayDfBoss">
+      <UniqueIdentifier>{63b46fc5-4860-4f3e-8ff7-7378db58d4dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\05Component\Transform">
+      <UniqueIdentifier>{e7efea4d-7457-4a24-a123-f01629568401}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\05Component\Animator">
+      <UniqueIdentifier>{965e485b-f1d0-4003-9e5d-c084e5bfba7f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\05Component\Collider">
+      <UniqueIdentifier>{6c8889e1-c199-49f2-bc7a-83703b0390b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\00Common\Camera">
+      <UniqueIdentifier>{efabf18c-c413-4d62-b7b8-ad7a6028f894}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Contents\BG_Obj">
+      <UniqueIdentifier>{de7dc61e-4384-445f-8ae3-db9be77a9893}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Contents\BG_Obj\10PlayDf1">
+      <UniqueIdentifier>{ed5cb631-354e-4d1a-b0de-3a15ad7813c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Contents\Monster">
+      <UniqueIdentifier>{25f6ac18-d879-4b79-866e-5413d19f0147}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -136,7 +154,7 @@
     <ClInclude Include="CScene.h">
       <Filter>Engine\02Scene</Filter>
     </ClInclude>
-    <ClInclude Include="CSceneManager.h">
+    <ClInclude Include="CSceneMgr.h">
       <Filter>Engine\02Scene</Filter>
     </ClInclude>
     <ClInclude Include="CApplication.h">
@@ -161,31 +179,31 @@
       <Filter>Engine\00Common\Input</Filter>
     </ClInclude>
     <ClInclude Include="CSceneTitleUbi.h">
-      <Filter>Contents\Scene\01Title</Filter>
+      <Filter>Engine\02Scene\01Title</Filter>
     </ClInclude>
     <ClInclude Include="CSceneTitle.h">
-      <Filter>Contents\Scene\01Title</Filter>
+      <Filter>Engine\02Scene\01Title</Filter>
     </ClInclude>
     <ClInclude Include="CSceneMap.h">
-      <Filter>Contents\Scene\02Map</Filter>
+      <Filter>Engine\02Scene\02Map</Filter>
     </ClInclude>
     <ClInclude Include="CSceneLoading.h">
-      <Filter>Contents\Scene\03Loading</Filter>
+      <Filter>Engine\02Scene\03Loading</Filter>
     </ClInclude>
     <ClInclude Include="CSceneEnding.h">
-      <Filter>Contents\Scene\04Ending</Filter>
+      <Filter>Engine\02Scene\04Ending</Filter>
     </ClInclude>
     <ClInclude Include="CScenePlayDf1.h">
-      <Filter>Contents\Scene\10PlayDf1</Filter>
+      <Filter>Engine\02Scene\10PlayDf1</Filter>
     </ClInclude>
     <ClInclude Include="CScenePlayDf2.h">
-      <Filter>Contents\Scene\20PlayDf2</Filter>
+      <Filter>Engine\02Scene\20PlayDf2</Filter>
     </ClInclude>
     <ClInclude Include="CScenePlayDf3.h">
-      <Filter>Contents\Scene\30PlayDf3</Filter>
+      <Filter>Engine\02Scene\30PlayDf3</Filter>
     </ClInclude>
     <ClInclude Include="CScenePlayDfBoss.h">
-      <Filter>Contents\Scene\40PlayDfBoss</Filter>
+      <Filter>Engine\02Scene\40PlayDfBoss</Filter>
     </ClInclude>
     <ClInclude Include="CMapRayman.h">
       <Filter>Contents\Player</Filter>
@@ -198,9 +216,6 @@
     </ClInclude>
     <ClInclude Include="CResources.h">
       <Filter>Engine\00Common\Resource</Filter>
-    </ClInclude>
-    <ClInclude Include="CTransform.h">
-      <Filter>Engine\05Component</Filter>
     </ClInclude>
     <ClInclude Include="CBgMap.h">
       <Filter>Contents\BG\02Map</Filter>
@@ -229,6 +244,33 @@
     <ClInclude Include="CBgPlayDfBoss.h">
       <Filter>Contents\BG\40PlayDfBoss</Filter>
     </ClInclude>
+    <ClInclude Include="CTransform.h">
+      <Filter>Engine\05Component\Transform</Filter>
+    </ClInclude>
+    <ClInclude Include="CAnimator.h">
+      <Filter>Engine\05Component\Animator</Filter>
+    </ClInclude>
+    <ClInclude Include="CAnimation.h">
+      <Filter>Engine\05Component\Animator</Filter>
+    </ClInclude>
+    <ClInclude Include="CObject.h">
+      <Filter>Engine\04GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="CCollisionMgr.h">
+      <Filter>Engine\05Component\Collider</Filter>
+    </ClInclude>
+    <ClInclude Include="CCollider.h">
+      <Filter>Engine\05Component\Collider</Filter>
+    </ClInclude>
+    <ClInclude Include="CCamera.h">
+      <Filter>Engine\00Common\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="CBgObjPlayDf1.h">
+      <Filter>Contents\BG_Obj\10PlayDf1</Filter>
+    </ClInclude>
+    <ClInclude Include="CBlueChomper.h">
+      <Filter>Contents\Monster</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Client.rc">
@@ -256,7 +298,7 @@
     <ClCompile Include="CScene.cpp">
       <Filter>Engine\02Scene</Filter>
     </ClCompile>
-    <ClCompile Include="CSceneManager.cpp">
+    <ClCompile Include="CSceneMgr.cpp">
       <Filter>Engine\02Scene</Filter>
     </ClCompile>
     <ClCompile Include="CApplication.cpp">
@@ -281,31 +323,31 @@
       <Filter>Engine\00Common\Input</Filter>
     </ClCompile>
     <ClCompile Include="CSceneTitle.cpp">
-      <Filter>Contents\Scene\01Title</Filter>
+      <Filter>Engine\02Scene\01Title</Filter>
     </ClCompile>
     <ClCompile Include="CSceneTitleUbi.cpp">
-      <Filter>Contents\Scene\01Title</Filter>
+      <Filter>Engine\02Scene\01Title</Filter>
     </ClCompile>
     <ClCompile Include="CSceneMap.cpp">
-      <Filter>Contents\Scene\02Map</Filter>
+      <Filter>Engine\02Scene\02Map</Filter>
     </ClCompile>
     <ClCompile Include="CSceneLoading.cpp">
-      <Filter>Contents\Scene\03Loading</Filter>
+      <Filter>Engine\02Scene\03Loading</Filter>
     </ClCompile>
     <ClCompile Include="CSceneEnding.cpp">
-      <Filter>Contents\Scene\04Ending</Filter>
+      <Filter>Engine\02Scene\04Ending</Filter>
     </ClCompile>
     <ClCompile Include="CScenePlayDf1.cpp">
-      <Filter>Contents\Scene\10PlayDf1</Filter>
+      <Filter>Engine\02Scene\10PlayDf1</Filter>
     </ClCompile>
     <ClCompile Include="CScenePlayDf2.cpp">
-      <Filter>Contents\Scene\20PlayDf2</Filter>
+      <Filter>Engine\02Scene\20PlayDf2</Filter>
     </ClCompile>
     <ClCompile Include="CScenePlayDf3.cpp">
-      <Filter>Contents\Scene\30PlayDf3</Filter>
+      <Filter>Engine\02Scene\30PlayDf3</Filter>
     </ClCompile>
     <ClCompile Include="CScenePlayDfBoss.cpp">
-      <Filter>Contents\Scene\40PlayDfBoss</Filter>
+      <Filter>Engine\02Scene\40PlayDfBoss</Filter>
     </ClCompile>
     <ClCompile Include="CMapRayman.cpp">
       <Filter>Contents\Player</Filter>
@@ -318,9 +360,6 @@
     </ClCompile>
     <ClCompile Include="CResources.cpp">
       <Filter>Engine\00Common\Resource</Filter>
-    </ClCompile>
-    <ClCompile Include="CTransform.cpp">
-      <Filter>Engine\05Component</Filter>
     </ClCompile>
     <ClCompile Include="CBgMap.cpp">
       <Filter>Contents\BG\02Map</Filter>
@@ -348,6 +387,30 @@
     </ClCompile>
     <ClCompile Include="CBgPlayDfBoss.cpp">
       <Filter>Contents\BG\40PlayDfBoss</Filter>
+    </ClCompile>
+    <ClCompile Include="CTransform.cpp">
+      <Filter>Engine\05Component\Transform</Filter>
+    </ClCompile>
+    <ClCompile Include="CAnimator.cpp">
+      <Filter>Engine\05Component\Animator</Filter>
+    </ClCompile>
+    <ClCompile Include="CAnimation.cpp">
+      <Filter>Engine\05Component\Animator</Filter>
+    </ClCompile>
+    <ClCompile Include="CCollisionMgr.cpp">
+      <Filter>Engine\05Component\Collider</Filter>
+    </ClCompile>
+    <ClCompile Include="CCollider.cpp">
+      <Filter>Engine\05Component\Collider</Filter>
+    </ClCompile>
+    <ClCompile Include="CCamera.cpp">
+      <Filter>Engine\00Common\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="CBgObjPlayDf1.cpp">
+      <Filter>Contents\BG_Obj\10PlayDf1</Filter>
+    </ClCompile>
+    <ClCompile Include="CBlueChomper.cpp">
+      <Filter>Contents\Monster</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

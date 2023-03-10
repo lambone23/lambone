@@ -10,6 +10,7 @@ namespace yha
 		static void Update();
 		static void Render(HDC hdc);
 
+	public:
 		__forceinline static double FnDeltaTime() { return mDeltaTime; }
 
 	private:

@@ -1,7 +1,9 @@
 #include "CApplication.h"
-#include "CSceneManager.h"
+#include "CSceneMgr.h"
 #include "CTime.h"
 #include "CInput.h"
+#include "CCollisionMgr.h"
+#include "CCamera.h"
 
 namespace yha
 {
@@ -13,7 +15,7 @@ namespace yha
 
 	CApplication::~CApplication()
 	{
-		CSceneManager::Release();
+		//CSceneMgr::Release();
 		//Time::Release();
 	}
 	
@@ -22,7 +24,7 @@ namespace yha
 		mHwnd = hWnd;
 		mHdc = GetDC(hWnd);
 
-		const EResolution SetResolution = EResolution::HD;
+		const EResolution SetResolution = EResolution::Custom;
 
 		if ((int)SetResolution == (int)EResolution::HD)
 		{
@@ -33,6 +35,11 @@ namespace yha
 		{
 			mWidth	= 1920;
 			mHeight	= 1080;
+		}
+		else if ((int)SetResolution == (int)EResolution::Custom)
+		{
+			mWidth = 1600;
+			mHeight = 1000;
 		}
 
 		// 비트맵 해상도를 설정하기 위한 실제 윈도우 크기를 계산
@@ -57,42 +64,50 @@ namespace yha
 
 		CTime::Initiailize();
 		CInput::Initialize();
-		CSceneManager::Initialize();
+		CSceneMgr::Initialize();
+		CCamera::Initiailize();
 	}
 
 	void CApplication::Run()
 	{
 		Update();
 		Render();
+		CSceneMgr::FnDestroy();
 	}
 
 	void CApplication::Update()
 	{
 		CTime::Update();
 		CInput::Update();
-		CSceneManager::Update();
+		CCamera::Update();
+
+		CSceneMgr::Update();
+		CCollisionMgr::Update();
 	}
 
 	void CApplication::Render()
 	{
 		// clear
-		Rectangle(mBackHDC, -1, -1, 1602, 902);
+		//Rectangle(mBackHDC, -1, -1, 1602, 902);
+		FnClear();
 
 		CTime::Render(mBackHDC);
 		CInput::Render(mBackHDC);
-		CSceneManager::Render(mBackHDC);
+		CSceneMgr::Render(mBackHDC);
 
 		// 백버퍼에 있는 그림을 원본버퍼에 그리기
 		BitBlt(mHdc, 0, 0, mWidth, mHeight, mBackHDC, 0, 0, SRCCOPY);
 
 	}
 
-	HWND CApplication::FnGetHwnd()
+
+	void CApplication::FnClear()
 	{
-		return mHwnd;
-	}
-	HDC CApplication::FnGetHdc()
-	{
-		return mHdc;
+		HBRUSH GreyBrush = CreateSolidBrush(RGB(121, 121, 121));
+		HBRUSH OldBrush = (HBRUSH)SelectObject(mBackHDC, GreyBrush);
+		//Rectangle(mBackHDC, -1, -1, 1602, 902);
+		Rectangle(mBackHDC, -1, -1, mWidth + 2, mHeight + 2);
+		SelectObject(mBackHDC, OldBrush);
+		DeleteObject(GreyBrush);
 	}
 }

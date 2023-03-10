@@ -9,19 +9,21 @@ namespace yha
 		CTransform();
 		~CTransform();
 
+	public:
 		virtual void Initialize() override;
 		virtual void Update() override;
 		virtual void Render(HDC hdc) override;
 		virtual void Release() override;
 
+	public:
 		void FnSetPos(VectorXY Pos) { mPos = Pos; }
-		void FnSetSize(VectorXY Size) { mSize = Size; }
+		void FnSetSize(VectorXY Size) { mScale = Size; }
 		VectorXY FnGetPos() { return mPos; }
-		VectorXY FnGetSize() { return mSize; }
+		VectorXY GetScale() { return mScale; }
 
 	private:
 		VectorXY mPos;
-		VectorXY mSize;
+		VectorXY mScale;
 
 	};
 }

@@ -1,7 +1,7 @@
 #include "CMapRayman.h"
 
 #include "CTime.h"
-#include "CSceneManager.h"
+#include "CSceneMgr.h"
 #include "CInput.h"
 #include "CResources.h"
 #include "CTransform.h"
@@ -16,7 +16,7 @@ namespace yha
 	}
 	void CMapRayman::Initialize()
 	{
-		mImage = CResources::FnLoad<CImage>(L"Player_MapRayman", L"..\\Resources\\BmpRaymanMapR.bmp");
+		mImage = CResources::FnLoad<CImage>(L"Player_MapRayman", L"..\\Resources\\tmp\\Rayman_Walk_R.bmp");
 
 		CGameObject::Initialize();
 	}

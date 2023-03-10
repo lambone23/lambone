@@ -6,7 +6,7 @@
 
 // ■CHK
 #include "CApplication.h"
-#include "CSceneManager.h"
+#include "CSceneMgr.h"
 #include "CResources.h"
 
 #define MAX_LOADSTRING 100
@@ -36,7 +36,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 
     // ■CHK
     _CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
-
+    //_CrtSetBreakAlloc(217); // 추가
     // 1. 윈도우의 정보를 담고있는 클래스를 정의(메모리에 등록)해주어야한다.
     // 2. CreateWindow함수를 통해서 메모리상에 윈도우를 할당해준다.
     // 3. ShowWindow함수를 통해서 화면에 보여준다.
@@ -79,14 +79,12 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
             MyApplication.Run();
         }
     }
-
-    yha::CSceneManager::Release();
+    
+    yha::CSceneMgr::Release();
     yha::CResources::Release();
 
     return (int)msg.wParam;
 }
-
-
 
 //
 //  함수: MyRegisterClass()
@@ -196,7 +194,6 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
     {
         PAINTSTRUCT ps;
         HDC hdc = BeginPaint(hWnd, &ps);
-
 
         //Ellipse(hdc, 500, 500, 600, 700);
         //RoundRect(hdc, 200, 200, 300, 300, 500, 500);

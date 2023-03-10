@@ -10,6 +10,7 @@ namespace yha
 		CBgPlayDf1();
 		~CBgPlayDf1();
 
+	public:
 		virtual void Initialize();
 		virtual void Update();
 		virtual void Render(HDC hdc);

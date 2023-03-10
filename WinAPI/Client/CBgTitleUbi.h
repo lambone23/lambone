@@ -10,6 +10,7 @@ namespace yha
 		CBgTitleUbi();
 		~CBgTitleUbi();
 
+	public:
 		virtual void Initialize();
 		virtual void Update();
 		virtual void Render(HDC hdc);
